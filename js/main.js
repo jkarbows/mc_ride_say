@@ -19,7 +19,7 @@ function spawnWindows(num) {
     var win = $(template.content.firstChild);
     var lastTop = $($('.window').last()).css('top');
     var lastLeft = $($('.window').last()).css('left');
-    $('#wrapper').append(win);
+    $('body').append(win);
     win.css('top', lastTop.substring(0, lastTop.length - 2) - 128 + 'px');
     win.css('left', lastLeft.substring(0, lastLeft.length - 2) - 0 + 32 + 'px');
     $('.window').draggable();
@@ -64,8 +64,7 @@ $(function() {
     mc_ride.attr('src', imgs[img_i]);
     mc_ride.toggleClass('rotate-left');
     setTimeout(function(){
-      mc_ride.toggleClass('rotate-left');
-      mc_ride.toggleClass('rotate-right');
+      mc_ride.toggleClass('rotate-left rotate-right');
       setTimeout(function(){
         mc_ride.toggleClass('rotate-right');
         setTimeout(function(){
