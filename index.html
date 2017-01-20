@@ -3,10 +3,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>* 2012 *</title>
+    <meta name="description" content="WwwwwwwwwwwwwwwwwwwwwwwwwwwwW">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src='js/main.js'></script>
   </head>
   <body>
+    <noscript>
+      <p class="no"><strong>Enable JavaScript</strong>, it's not gonna hurt you shitlord</p>
+    </noscript>
+
     <img class="tv" src="img/old-tv.png" />
+    
     <div class="main">
       <div class="wrapper center-center">
         <img id="mc-ride" src="img/mc_ride0.png" />
@@ -17,34 +27,24 @@
       <img class="column-right" src="img/column.png" />
       <img id="house" src="img/house.jpg" />
       <img id="dolphin-icon" src="img/dolphin-icon.png" />
-      <img id="task-bar" src="img/task-bar.gif" />
+      <img id="task-bar" src="img/task-bar.png" />
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-    <script src='js/main.js'></script>
+    
+
+    
     <div class="window draggable">
       <div class="header">
-        <img class="icon" src="exe.gif">
-          Popup Manager Manager
+        <img class="icon" src="img/exe.gif">
+        <span>Popup Manager Manager</span>
       </div>
       <div class="content">
         <center>
           <h3>IT GOES IT GOES IT GOES IT GOES</h3>
           <p>*guillotine*</p>
-          <button>HUH</button>
+          <button onclick="spawnWindows(2)">HUH</button>
         </center>
       </div>
-      </div>
-      <script>
-        $('.window').draggable();
-        $('.window button').on('click', function() {
-          var win = $('.window').first().clone(true, true);
-          $('body').append(win);
-          $('.window').draggable();
-        });
-      </script>
-      <noscript>
-        <p class="no"><strong>Enable JavaScript</strong>, it's not gonna hurt you shitlord</p>
-    </noscript>
+    </div>
+
   </body>
 </html>

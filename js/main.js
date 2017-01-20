@@ -1,5 +1,32 @@
-$(document).ready(function() {
+function spawnWindows(num) {
+  var windowString = '<div class="window draggable">' +
+      '<div class="header">' +
+        '<img class="icon" src="img/exe.gif">' +
+        '<span>Popup Manager Manager</span>' +
+      '</div>' +
+      '<div class="content">' +
+        '<center>' +
+          '<h3>IT GOES IT GOES IT GOES IT GOES</h3>' +
+          '<p>*guillotine*</p>' +
+          '<button onclick="spawnWindows(1)">HUH</button>' +
+        '</center>' +
+      '</div>' +
+    '</div>'
+  var template = document.createElement('template');
+  template.innerHTML = windowString;
+  if(!num) {num = 1;}
+  while(num--) {
+    var win = $(template.content.firstChild);
+    var lastTop = $($('.window').last()).css('top');
+    var lastLeft = $($('.window').last()).css('left');
+    $('body').append(win);
+    win.css('top', lastTop.substring(0, lastTop.length - 2) - 128 + 'px');
+    win.css('left', lastLeft.substring(0, lastLeft.length - 2) - 0 + 32 + 'px');
+    $('.window').draggable();
+  }
+}
 
+$(function() {
   var imgs = [
     'img/angery react.gif',
     'img/mic on white.gif',
@@ -24,15 +51,14 @@ $(document).ready(function() {
   var mc_ride = $('#mc-ride');
 
   $('.tv').on('click', function() {
-    console.log('im click');
+    spawnWindows();
     var wav_i = Math.floor(Math.random() * sounds.length);
     var audio = new Audio(sounds[wav_i]);
     audio.play();
-    console.log('test');
     var img_i = Math.floor(Math.random() * imgs.length);
     mc_ride.attr('src', imgs[img_i]);
     mc_ride.toggleClass('rotate-left');
-        setTimeout(function(){
+    setTimeout(function(){
       mc_ride.toggleClass('rotate-left');
       mc_ride.toggleClass('rotate-right');
       setTimeout(function(){
@@ -43,4 +69,6 @@ $(document).ready(function() {
       }, 1000);
     }, 1000);
   });
+
+  $('.window').draggable();
 });
