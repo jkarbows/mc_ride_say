@@ -17,11 +17,11 @@ function spawnWindows(num) {
   if(!num) {num = 1;}
   while(num--) {
     var win = $(template.content.firstChild);
-    var lastTop = $($('.window').last()).css('top');
+    var prevWindowPos = $($('.window').last()).position();
     var lastLeft = $($('.window').last()).css('left');
     $('body').append(win);
-    win.css('top', lastTop.substring(0, lastTop.length - 2) - 128 + 'px');
-    win.css('left', lastLeft.substring(0, lastLeft.length - 2) - 0 + 32 + 'px');
+    win.css('top', prevWindowPos.top - 128 + 'px');
+    win.css('left', prevWindowPos.left + 32 + 'px');
     $('.window').draggable();
   }
 }
