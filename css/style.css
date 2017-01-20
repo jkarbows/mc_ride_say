@@ -65,6 +65,7 @@ body {
   bottom: -25px;
   left: 25px;
   transform: rotate(26deg);
+  animation: hueRotate 5s linear infinite;
 }
 
 #bubble {
@@ -110,6 +111,7 @@ body {
   position: absolute;
   top: 62%;
   background: url(../img/palm.png);
+  animation: wave 5s linear infinite;
 }
 
 #task-bar {
@@ -166,4 +168,18 @@ body {
 .window button:active:enabled {
   box-shadow: 0 0 0 0 #000 inset;
   border-color: #000;
+}
+
+@keyframes wave {
+	0% { top: 56%; transform: rotate(-4deg) }
+  25% { transform: rotate(4deg) }
+  50% { top: 48%; transform: rotate(-2deg) }
+  75% { transform: rotate(4deg) }
+  100% { top: 56%; transform: rotate(-4deg) }
+}
+
+@keyframes hueRotate {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(359deg); }
 }
