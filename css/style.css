@@ -171,11 +171,11 @@ body {
 }
 
 @keyframes wave {
-	0% { top: 56%; transform: rotate(-4deg) }
-  25% { transform: rotate(4deg) }
-  50% { top: 48%; transform: rotate(-2deg) }
-  75% { transform: rotate(4deg) }
-  100% { top: 56%; transform: rotate(-4deg) }
+  0% { top: 56%; transform: rotate(-4deg); }
+  25% { transform: rotate(4deg); }
+  50% { top: 48%; transform: rotate(-2deg); }
+  75% { transform: rotate(4deg); }
+  100% { top: 56%; transform: rotate(-4deg); }
 }
 
 @keyframes hueRotate {
