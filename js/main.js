@@ -19,10 +19,15 @@ function spawnWindows(num) {
     var win = $(template.content.firstChild);
     var lastTop = $($('.window').last()).css('top');
     var lastLeft = $($('.window').last()).css('left');
-    $('body').append(win);
+    $('#wrapper').append(win);
     win.css('top', lastTop.substring(0, lastTop.length - 2) - 128 + 'px');
     win.css('left', lastLeft.substring(0, lastLeft.length - 2) - 0 + 32 + 'px');
     $('.window').draggable();
+    /*var pos = win.offset();
+    if (pos.top > $(window).height() || pos.top < 0 || pos.left + 420 > $(window).width() || pos.left < 0) {
+      var windows = $('.window');
+      win.css('top', windows[~~(Math.random() * windows.length)].style.top).css('left', Math.random() * $(window).width() - 420);
+    }*/
   }
 }
 

@@ -9,6 +9,7 @@ body {
 
 body {
   background: url('../img/wall.jpg');
+  overflow: hidden;
 }
 
 .main {
@@ -111,7 +112,7 @@ body {
 }
 
 .window {
-  width: 400px;
+  width: 420px;
   overflow: auto;
   resize: both;
   background: #bfbfbf;
