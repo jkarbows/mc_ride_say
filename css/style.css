@@ -104,6 +104,14 @@ body {
 
 }
 
+.palm {
+  height: 420px;
+  width: 100%;
+  position: absolute;
+  top: 62%;
+  background: url(../img/palm.png);
+}
+
 #task-bar {
   position: absolute;
   bottom: 0;

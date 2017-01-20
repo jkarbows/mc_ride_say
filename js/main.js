@@ -32,6 +32,7 @@ function spawnWindows(num) {
 }
 
 $(function() {
+  $('audio')[0].volume = 0.6;
   var imgs = [
     'img/angery react.gif',
     'img/mic on white.gif',
